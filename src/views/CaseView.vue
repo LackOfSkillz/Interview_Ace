@@ -108,11 +108,11 @@ const selectAnswer = (option) => {
 const submitAnswer = () => {
   if (answerSubmitted.value) return;
 
-  const answer = currentQuestion.value.type === 'fill-in-the-blank' 
-    ? userFillAnswer.value.trim().toLowerCase()
-    : selectedAnswer.value;
-
-  isCorrect.value = answer === currentQuestion.value.answer;
+  if (currentQuestion.value.type === 'fill-in-the-blank') {
+    isCorrect.value = userFillAnswer.value.trim().toLowerCase() === currentQuestion.value.answer.toLowerCase();
+  } else { // multiple-choice
+    isCorrect.value = selectedAnswer.value === currentQuestion.value.answer;
+  }
   answerSubmitted.value = true;
 
   if (isCorrect.value) {
