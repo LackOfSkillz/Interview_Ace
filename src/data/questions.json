@@ -173,11 +173,11 @@
     "options": [
       "1.1.1.0/24",
       "172.16.0.0/12",
-      "192.168.1.0/24",
-      "10.0.0.0/8"
+      "203.0.113.0/24",
+      "198.51.100.0/24"
     ],
     "answer": "172.16.0.0/12",
-    "explanation": "Private IPv4 address ranges are defined in RFC 1918. They are: 10.0.0.0/8, 172.16.0.0/12, and 192.168.0.0/16. The 172.16.0.0/12 range includes addresses from 172.16.0.0 to 172.31.255.255."
+    "explanation": "Private IPv4 address ranges are defined in RFC 1918. They are: 10.0.0.0/8 (10.0.0.0 - 10.255.255.255), 172.16.0.0/12 (172.16.0.0 - 172.31.255.255), and 192.168.0.0/16 (192.168.0.0 - 192.168.255.255). The other options (1.1.1.0/24, 203.0.113.0/24, 198.51.100.0/24) are public IP address ranges."
   },
   {
     "id": 111,
